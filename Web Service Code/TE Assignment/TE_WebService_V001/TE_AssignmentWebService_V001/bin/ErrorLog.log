@@ -1,0 +1,41 @@
+[01/04/2017 2:04:22 PM][         GetAssignedEngineer()] Column 'ESTETA' does not belong to table Table.
+[02/06/2017 7:12:18 PM][      ConnectToTargetCompany()] Unable to access SBO-Common database
+[02/06/2017 7:12:18 PM][      ConnectToTargetCompany()] Unable to access SBO-Common database
+[02/06/2017 7:12:18 PM][AddActivityUsingActivityService] Unable to access SBO-Common database
+[02/06/2017 7:15:41 PM][      ConnectToTargetCompany()] Unable to access SBO-Common database
+[02/06/2017 7:15:45 PM][      ConnectToTargetCompany()] Unable to access SBO-Common database
+[02/06/2017 7:15:47 PM][AddActivityUsingActivityService] Unable to access SBO-Common database
+[02/06/2017 7:16:33 PM][AddActivityUsingActivityService] The ConnectionString property has not been initialized.
+[02/06/2017 7:19:12 PM][AddActivityUsingActivityService] Object reference not set to an instance of an object.
+[02/06/2017 7:24:38 PM][AddActivityUsingActivityService] Adding the specified count to the semaphore would cause it to exceed its maximum count.
+[02/06/2017 10:17:00 PM][             Get_CompanyList()] Could not find stored procedure 'VS_SP001_Web_GetCompanyList'.
+[02/06/2017 10:17:00 PM][      ConnectToTargetCompany()] Could not find stored procedure 'VS_SP001_Web_GetCompanyList'.
+[02/06/2017 10:21:46 PM][      ConnectToTargetCompany()] Index 0 is either negative or above rows count.
+[02/06/2017 10:21:46 PM][AddActivityUsingActivityService] Index 0 is either negative or above rows count.
+[02/06/2017 10:24:19 PM][      ConnectToTargetCompany()] Unable to access SBO-Common database
+[02/06/2017 10:25:14 PM][      ConnectToTargetCompany()] Unable to access SBO-Common database
+[02/06/2017 10:25:14 PM][      ConnectToTargetCompany()] Unable to access SBO-Common database
+[02/06/2017 10:25:14 PM][AddActivityUsingActivityService] Unable to access SBO-Common database
+[02/06/2017 10:26:26 PM][      ConnectToTargetCompany()] Unable to access SBO-Common database
+[02/06/2017 10:26:26 PM][      ConnectToTargetCompany()] Unable to access SBO-Common database
+[02/06/2017 10:26:26 PM][AddActivityUsingActivityService] Unable to access SBO-Common database
+[02/06/2017 10:28:46 PM][      ConnectToTargetCompany()] Unable to access SBO-Common database
+[02/06/2017 10:28:46 PM][      ConnectToTargetCompany()] Unable to access SBO-Common database
+[02/06/2017 10:28:46 PM][AddActivityUsingActivityService] Unable to access SBO-Common database
+[02/07/2017 10:39:06 AM][      ConnectToTargetCompany()] Unable to access SBO-Common database
+[02/07/2017 10:39:06 AM][      ConnectToTargetCompany()] Unable to access SBO-Common database
+[02/07/2017 10:39:06 AM][AddActivityUsingActivityService] Unable to access SBO-Common database
+[02/07/2017 10:39:37 AM][      ConnectToTargetCompany()] Unable to access SBO-Common database
+[02/07/2017 10:39:37 AM][      ConnectToTargetCompany()] Unable to access SBO-Common database
+[02/07/2017 10:39:37 AM][AddActivityUsingActivityService] Unable to access SBO-Common database
+[02/07/2017 10:41:55 AM][      ConnectToTargetCompany()] Unable to access SBO-Common database
+[02/07/2017 10:41:55 AM][      ConnectToTargetCompany()] Unable to access SBO-Common database
+[02/07/2017 10:41:55 AM][AddActivityUsingActivityService] Unable to access SBO-Common database
+[02/07/2017 10:43:26 AM][AddActivityUsingActivityService] AssignedEngineerId is neither a DataColumn nor a DataRelation for table .
+[02/07/2017 10:50:43 AM][AddActivityUsingActivityService] Invalid column name 'u_ob_enddate'.
+Invalid column name 'u_ob_resp_site_time'.
+Invalid column name 'u_ob_results'.
+Invalid column name 'u_ob_success'.
+Invalid column name 'u_ob_resp_sms_date'.
+Invalid column name 'u_ob_resp_sms_time'.
+Invalid column name 'U_ob_activitytype'.

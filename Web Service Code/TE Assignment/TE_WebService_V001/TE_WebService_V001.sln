@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TE_BLL_V001", "TE_BLL_V001\TE_BLL_V001.csproj", "{7755F188-6125-4A8F-8145-A3E54A90DE0D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TE_WebService_V001", "TE_AssignmentWebService_V001\TE_WebService_V001.csproj", "{60A84192-F738-480B-9999-F24488346EDB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7755F188-6125-4A8F-8145-A3E54A90DE0D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7755F188-6125-4A8F-8145-A3E54A90DE0D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7755F188-6125-4A8F-8145-A3E54A90DE0D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7755F188-6125-4A8F-8145-A3E54A90DE0D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{60A84192-F738-480B-9999-F24488346EDB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{60A84192-F738-480B-9999-F24488346EDB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{60A84192-F738-480B-9999-F24488346EDB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{60A84192-F738-480B-9999-F24488346EDB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

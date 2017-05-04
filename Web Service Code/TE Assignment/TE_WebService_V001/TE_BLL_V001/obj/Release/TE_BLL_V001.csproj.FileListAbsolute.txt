@@ -1,0 +1,4 @@
+E:\VIVEK\TE Assignment\TE_WebService_V001\TE_BLL_V001\bin\Release\TE_BLL_V001.dll
+E:\VIVEK\TE Assignment\TE_WebService_V001\TE_BLL_V001\bin\Release\TE_BLL_V001.pdb
+E:\VIVEK\TE Assignment\TE_WebService_V001\TE_BLL_V001\obj\Release\TE_BLL_V001.dll
+E:\VIVEK\TE Assignment\TE_WebService_V001\TE_BLL_V001\obj\Release\TE_BLL_V001.pdb

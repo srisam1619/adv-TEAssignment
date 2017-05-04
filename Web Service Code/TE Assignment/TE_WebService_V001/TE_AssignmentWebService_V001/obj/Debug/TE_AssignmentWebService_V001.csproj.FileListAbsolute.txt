@@ -1,0 +1,7 @@
+E:\VIVEK\TE Assignment\TE_WebService_V001\TE_AssignmentWebService_V001\bin\TE_AssignmentWebService_V001.dll
+E:\VIVEK\TE Assignment\TE_WebService_V001\TE_AssignmentWebService_V001\bin\TE_AssignmentWebService_V001.pdb
+E:\VIVEK\TE Assignment\TE_WebService_V001\TE_AssignmentWebService_V001\obj\Debug\TE_AssignmentWebService_V001.dll
+E:\VIVEK\TE Assignment\TE_WebService_V001\TE_AssignmentWebService_V001\obj\Debug\TE_AssignmentWebService_V001.pdb
+E:\VIVEK\TE Assignment\TE_WebService_V001\TE_AssignmentWebService_V001\obj\Debug\TE_AssignmentWebService_V001.csprojResolveAssemblyReference.cache
+E:\VIVEK\TE Assignment\TE_WebService_V001\TE_AssignmentWebService_V001\bin\TE_BLL_V001.dll
+E:\VIVEK\TE Assignment\TE_WebService_V001\TE_AssignmentWebService_V001\bin\TE_BLL_V001.pdb

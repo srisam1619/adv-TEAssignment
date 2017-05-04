@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<publishData>
+  <publishProfile publishUrl="D:\VIVEK\TE_Publish\" deleteExistingFiles="False" ftpAnonymousLogin="False" ftpPassiveMode="True" msdeploySite="" msdeploySiteID="" msdeployRemoteSitePhysicalPath="" msdeployAllowUntrustedCertificate="False" msdeploySkipExtraFilesOnServer="True" msdeployMarkAsApp="False" profileName="Profile1" publishMethod="FileSystem" replaceMatchingFiles="True" userName="" savePWD="False" userPWD="" SelectedForPublish="True">
+    <file relUrl="TEAssignment.asmx" publishTime="12/19/2016 14:07:15" />
+    <file relUrl="bin/TE_BLL_V001.dll" publishTime="02/13/2017 11:31:35" />
+    <file relUrl="Web.config" publishTime="02/07/2017 21:26:57" />
+    <file relUrl="bin/TE_BLL_V001.pdb" publishTime="02/13/2017 11:31:35" />
+    <file relUrl="bin/TE_AssignmentWebService_V001.pdb" publishTime="02/13/2017 11:31:35" />
+    <file relUrl="bin/TE_AssignmentWebService_V001.dll" publishTime="02/13/2017 11:31:36" />
+  </publishProfile>
+</publishData>
