@@ -36,14 +36,14 @@ namespace TE_WebService_V001
             //   Parameters :    ByVal strErrText As String
             //                       strErrText = Text to be written to the log
             //                   ByVal intLogType As Integer
-            //                       intLogType = Log type (1 - Log ; 2 - Error ; 0 - None)
+            // a                      intLogType = Log type (1 - Log ; 2 - Error ; 0 - None)
             //                   ByVal strSourceName As String
             //                       strSourceName = Function name calling this function
             //                   Optional ByVal intCheckFileForDelete As Integer
             //                       intCheckFileForDelete = Flag to indicate if file size need to be checked before logging (0 - No check ; 1 - Check)
             //   Return     :    0 - FAILURE
             //                   1 - SUCCESS
-            //   Author     :    JOHN
+            //   Author     :    JOHNaaaaaa
             //   Date       :    MAY 2013
             //   Changes    : 
             //                   
