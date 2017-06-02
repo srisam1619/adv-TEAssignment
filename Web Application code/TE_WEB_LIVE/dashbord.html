@@ -1,0 +1,635 @@
+<!DOCTYPE html> 
+<html  lang="en">
+<head>
+
+    <style>
+	.orange
+	{
+		background:#e68b2a;
+	}
+	.Yellow
+	{
+		background:#FFCC00;
+	}
+	.blue
+	{
+		background:#090854;
+		color:#FFFFFF;
+	}
+	.LightRed
+	{
+		background:#FF2F2F;
+	}
+	.white
+	{
+		background:#f9fafe;
+	}
+	.Gray
+	{
+		background:#CCCCCC;
+	}
+	.green
+	{
+	background:#00CC00;
+	}
+	.Maroon
+	{
+	background:#fd7d7d;
+	color:#FFFFFF;
+	}
+     
+	  .loaderss
+	{
+	position:fixed;
+	left:47%;
+	top:40px;
+	padding:10px;
+	background:#FFCC00;
+	color:#333333;
+	z-index: 100000;
+	-webkit-border-bottom-right-radius: 5px;
+	-webkit-border-bottom-left-radius: 5px;
+	-moz-border-radius-bottomright: 5px;
+	-moz-border-radius-bottomleft: 5px;
+	border-bottom-right-radius: 5px;
+	border-bottom-left-radius: 5px;
+	}
+	
+	.fixed {
+    position: fixed;
+    top: 0;
+	left:15px;
+	right:15px;
+	background:#FFFFFF;
+}
+.searchbar{
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+.upfixed
+{
+	position:fixed;
+	bottom:10px;
+	right:10px;
+	z-index:+10000;
+}
+.upfixedHide
+{
+	display:none;
+}
+.upfixedShow
+{
+	display:block;
+}
+
+
+
+
+    </style>
+
+
+    <meta charset="UTF-8">
+<!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
+<title> Forms elements </title>
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+<!-- Favicons -->
+
+
+
+
+    <link rel="stylesheet" type="text/css" href="assets-minified/admin-all-demo.css">
+
+    <!-- JS Core -->
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+
+
+
+
+    <script type="text/javascript">
+        $(window).load(function(){
+            setTimeout(function() {
+                $('#loading').fadeOut( 400, "linear" );
+            }, 300);
+        });
+    </script>
+
+
+    <script src="assets/js/libs/angular.js"></script>
+      <script src="assets/js/libs/angular-route.js"></script>
+     <script src="assets/js/libs/angular-ui-router.js"></script>
+    <script src="assets/js/libs/ocLazyLoad.js"></script>
+    <script src="assets/js/libs/ui-bootstrap.js"></script>
+    <script src="assets/js/libs/ui-bootstrap-tpls-0.9.0.js"></script>
+    <script src="assets/js/libs/angular-cookies.js"></script>
+
+
+
+
+
+<!-- angular js -->
+
+<script src="assets/js/modernizr.custom.js"></script>
+    <script src="assets/js/config/app.js"></script>
+    <script src="assets/js/services/util_factory.js" ></script>
+	<script src="assets/js/ctrl/dashbord.js" ></script>
+<link rel="stylesheet" type="text/css" href="assets/css/font-awesome.css">
+
+
+
+ 
+  
+  <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
+  
+  
+</head>
+
+
+    <body ng-class="bodyclass"  class="closed-sidebar" ng-app="myApp" ng-controller="dashbord_ctrl">
+	<div class="loaderss" data-loadingss id="loadingss"><i class="fa fa-refresh fa-spin fa-fw"></i> Loading...</div>
+    <div id="sb-site">
+    <div class="sb-slidebar bg-black sb-left sb-style-overlay">
+    
+</div>
+
+<div class="sb-slidebar bg-black sb-right sb-style-overlay">
+<div class="scrollable-content scrollable-slim-sidebar">
+
+</div>
+</div>
+    <div id="loadingedseoad">
+        <div class="spinner">
+            <div class="bounce1"></div>
+            <div class="bounce2"></div>
+            <div class="bounce3"></div>
+        </div>
+    </div>
+
+    <div id="page-wrapper">
+        <div id="page-header" class="bg-gradient-8">
+    <div id="mobile-navigation">
+        <button id="nav-toggle" class="collapsed" data-toggle="collapse" data-target="#page-sidebar"><span></span></button>
+        <a href="demo/admin-template/index.html" class="logo-content-small" title="UI"></a>
+    </div>
+    <div id="header-logo" class="logo-bg">
+        <a href="" ng-init="closemenu();" ng-click="closemenu();" class="logo-content-big" title="UI">
+           Name
+           
+        </a>
+        <a href="" ng-click="closemenu();" class="logo-content-small" title="UI">
+            
+            Name
+        </a>
+        <a id="close-sidebar" href="#" title="Close sidebar" ng-click="closemenu();">
+            <i class="glyph-icon icon-angle-left"></i>
+        </a>
+    </div>
+    <!-- #header-nav-left -->
+
+    <div id="header-nav-right">
+        
+        
+    
+        <div style="float:left; font-size:14px;color:#FFFFFF;line-height:45px; font-family:Verdana, Arial, Helvetica, sans-serif;">Welcome <span style="font-weight:bold">{{userdata[0].UserName}} </span></div>
+        
+        <div class="dropdown" id="dashnav-btn">
+            <a href="#"  id="fullscreen-btn" class="popover-button-header tooltip-button" data-placement="bottom" title="Full Screen">
+                <i class="glyph-icon icon-arrows-alt"></i>
+            </a>
+            
+        </div>
+        <a  id="logout-btn" href="login.html"  class="popover-button-header header-btn tooltip-button" data-placement="bottom"  title="Logout">
+            <i class="glyph-icon icon-linecons-lock"></i>
+        </a>
+
+    </div>
+	<!-- #header-nav-right -->
+
+</div>
+        <div id="page-sidebar">
+    <div class="scroll-sidebar">
+        
+
+    <ul id="sidebar-menu">
+    <li class="header"><span>Overview</span></li>
+    <li>
+        <a href="#" title="Admin Dashboard">
+            <i class="glyph-icon icon-linecons-tv"></i>
+            <span>Admin dashboard</span>
+        </a>
+    </li>
+    
+    </ul><!-- #sidebar-menu -->
+
+
+    </div>
+</div>
+        <div id="page-content-wrapper">
+            <div id="page-content">
+                
+                    <div class="container">
+
+<div id="page-title">
+  
+  Database Name : {{userdata[0].CompanyCode}}
+    
+</div>
+
+<div class="row-fluid">
+
+	<p>Call Type Filter :</p><br/><p><select class="form-control" ng-options="item.Name as item.Name for item in calltype track by item.Id" ng-model="searchtext.CallType"><option value="">-- Select --</option></select></p>
+	<br/>
+    
+ 
+        <div class="panel panel-primary">
+             <div class="panel-heading">
+               <h3 class="panel-title">Call Details</h3>
+             </div>
+             <div class="panel-body" style="padding: 5px">
+			 	<table width="100%" border="0" cellspacing="5" class="table-bordered table-responsive table" cellpadding="5">
+  <tr style="font-weight:bold" >
+    <th style="background:#666666; color:#FFFFFF;">Service Call ID</th>
+    <th style="background:#666666; color:#FFFFFF;">Customer Name</th>
+    <th style="background:#666666; color:#FFFFFF;">Start Date</th>
+    <th style="background:#666666; color:#FFFFFF;">Start Time</th>
+    <th style="background:#666666; color:#FFFFFF;">Type of SLA</th>
+    <th style="background:#666666; color:#FFFFFF;">Assigned Engineer</th>
+    <th style="background:#666666; color:#FFFFFF;">Issue</th>
+    <th style="background:#666666; color:#FFFFFF;">Serial No.</th>
+    <th style="background:#666666; color:#FFFFFF;">Model</th>
+    <th style="background:#666666; color:#FFFFFF;">Call Type</th>
+    <th style="background:#666666; color:#FFFFFF;">Activity No.</th>
+  </tr>
+  <tr ng-repeat="d in ServiceCall |filter:{'CallType':searchtext.CallType||undefined}">
+    <td>{{d.ServiceCallId}}</td>
+    <td>{{d.CustomerName}}</td>
+    <td>{{d.StartDate}}</td>
+    <td>{{d.StartTime}}</td>
+    <td ng-init="d.TypeofSLA='TE - Level 1 - Non-SLA Responding Onsite'"><select ng-model="d.TypeOfSLA" class="form-control">
+	<option value="TE - Level 1 - SLA Responding Onsite">TE - Level 1 - SLA Responding Onsite </option>
+	<option value="TE - Level 1 - Non-SLA Responding Onsite">TE - Level 1 - Non-SLA Responding Onsite </option>
+	
+	</select></td>
+    <td><div class="input-group">
+	  <input type="text" class="form-control" ng-model="d.AssignedEngineer" placeholder="">
+      <span class="input-group-btn">
+        <button class="btn-primary btn" type="button" ng-click="openAAmodal(d.RowNumber);" ><i class="fa fa-search" aria-hidden="true"></i></button>
+      </span>
+	  
+    
+    </div></td>
+    <td>{{d.Issue}}</td>
+    <td>{{d.SerialNo}}</td>
+    <td>{{d.Model}}</td>
+    <td>{{d.CallType}}</td>
+    <td>{{d.ActivityNo}}</td>
+  </tr>
+  
+</table>
+
+			 <div align="center"><button type="button" ng-click="SubmitAssEngg();" class="btn-success btn">Submit</button></div>
+			 
+			 </div>
+        </div>
+		
+		<div class="panel panel-primary">
+             <div class="panel-heading">
+               <h3 class="panel-title">Calendar</h3>
+             </div>
+          <div class="panel-body" style="padding:5px;">
+			 
+			 <div class="col-lg-6" style="margin-bottom:10px;">
+			 <div class="col-lg-6">Date: <div class="input-group">
+	  <input type="text" id="date" class="form-control datepickerddd" ng-model="sDate" placeholder="" >
+      <span class="input-group-btn">
+        <button type="button"  class="btn-primary btn" onClick="$('#date').datepicker('show');" ><i class="fa fa-calendar" aria-hidden="true"></i></button>
+      </span>
+    
+    </div></div>
+				<div class="col-lg-6">&nbsp;
+		 <div class="input-group">
+	  <button type="button"  class="btn-primary btn" ng-click="GetEngineerList();" >Engineer List <i class="fa fa-user-plus" aria-hidden="true"></i></button>
+	  
+	&nbsp;&nbsp;  <button type="button" class="btn-danger btn" ng-click="ShowCalender();" >Show Calender <i class="fa fa-eye" aria-hidden="true"></i></button>
+      
+    
+    </div> </div>
+	</div>
+		<div style="overflow:auto;width:100%;float:left"><!--{{CalenderViewData}}-->
+		 	 <table width="100%" border="0" cellspacing="5" class="table-bordered table"  cellpadding="5">
+  <tr>
+    <td colspan="11">Date:  {{sDate}} </td>
+    </tr>
+  <tr  >
+    <th style="background:#666666; color:#FFFFFF;" ><strong>Time </strong></th>
+    <th style="background:#666666; color:#FFFFFF;" ng-repeat="d in CalenderViewData"><div align="center"><strong>{{d.EmployeeName}}</strong></div></th>
+  
+  </tr>
+  <tr>
+    <td>8.00AM</td>
+    <td ng-repeat="d in CalenderViewData"  style="color:#000000;" class="{{d.TimeData[0].AAM.LR}}" > <div ng-if="d.TimeData[0].AAM.Status=='Available'">{{d.TimeData[0].AAM.CallId}}<br>
+      {{d.TimeData[0].AAM.CustomerName}}<br>
+      {{d.TimeData[0].AAM.Subject}}<br>
+      <span  ng-hide="d.TimeData[0].AAM.Result==null"  ng-show="d.TimeData[0].AAM.Result==''" >Status: {{d.TimeData[0].AAM.ActivityType}}</span>
+	  <span  ng-hide="d.TimeData[0].AAM.Result==null"  ng-show="d.TimeData[0].AAM.Result!=''" >Status: {{d.TimeData[0].AAM.Result}}</span><br>
+      <span ng-hide="d.TimeData[0].AAM.Result==null" ng-show="d.TimeData[0].AAM.Result=='Completed'" >End Time: {{d.TimeData[0].AAM.EndTime}}</span>
+	  <span  ng-hide="d.TimeData[0].AAM.Result==null"  ng-show="d.TimeData[0].AAM.Result!='Completed'" >Start Time: {{d.TimeData[0].AAM.RespTime}}</span><br>
+     <span ng-hide="d.TimeData[0].AAM.Address==null">Address: {{d.TimeData[0].AAM.Address}}</span>
+	 </div>
+	  <div ng-if="d.TimeData[0].AAM.Status=='Unavailable to take service calls'">Unavailable to take service calls</div>
+	 </td>
+   
+  </tr>
+  <tr>
+    <td>9.00AM</td>
+   <td ng-repeat="d in CalenderViewData"  style="color:#000000" class="{{d.TimeData[0].BAM.LR}}" ><div ng-if="d.TimeData[0].BAM.Status=='Available'">{{d.TimeData[1].BAM.CallId}}<br>
+      {{d.TimeData[0].BAM.CustomerName}}<br>
+      {{d.TimeData[0].BAM.Subject}}<br>
+      <span  ng-hide="d.TimeData[0].BAM.Result==null"  ng-show="d.TimeData[0].BAM.Result==''" >Status: {{d.TimeData[0].BAM.ActivityType}}</span>
+	  <span  ng-hide="d.TimeData[0].BAM.Result==null"  ng-show="d.TimeData[0].BAM.Result!=''" >Status: {{d.TimeData[0].BAM.Result}}</span><br>
+      <span ng-hide="d.TimeData[0].BAM.Result==null" ng-show="d.TimeData[0].BAM.Result=='Completed'" >End Time: {{d.TimeData[0].BAM.EndTime}}</span>
+	  <span  ng-hide="d.TimeData[0].BAM.Result==null"  ng-show="d.TimeData[0].BAM.Result!='Completed'" >Start Time: {{d.TimeData[0].BAM.RespTime}}</span><br>
+     <span ng-hide="d.TimeData[0].BAM.Address==null">Address: {{d.TimeData[0].BAM.Address}}</span>
+	 </div>
+	 <div ng-if="d.TimeData[0].BAM.Status=='Unavailable to take service calls'">Unavailable to take service calls</div>
+	 </td>
+  </tr>
+  <tr>
+    <td>10.00AM</td>
+   <td ng-repeat="d in CalenderViewData"  style="color:#000000" class="{{d.TimeData[0].CAM.LR}}"  ><div ng-if="d.TimeData[0].CAM.Status=='Available'">{{d.TimeData[0].CAM.CallId}}<br>
+      {{d.TimeData[0].CAM.CustomerName}}<br>
+      {{d.TimeData[0].CAM.Subject}}<br>
+      <span  ng-hide="d.TimeData[0].CAM.Result==null"  ng-show="d.TimeData[0].CAM.Result==''" >Status: {{d.TimeData[0].CAM.ActivityType}}</span>
+	  <span  ng-hide="d.TimeData[0].CAM.Result==null"  ng-show="d.TimeData[0].CAM.Result!=''" >Status: {{d.TimeData[0].CAM.Result}}</span><br>
+      <span ng-hide="d.TimeData[0].CAM.Result==null" ng-show="d.TimeData[0].CAM.Result=='Completed'" >End Time: {{d.TimeData[0].CAM.EndTime}}</span>
+	  <span  ng-hide="d.TimeData[0].CAM.Result==null"  ng-show="d.TimeData[0].CAM.Result!='Completed'" >Start Time: {{d.TimeData[0].CAM.RespTime}}</span><br>
+     <span ng-hide="d.TimeData[0].CAM.Address==null">Address: {{d.TimeData[0].CAM.Address}}</span>
+	 </div>
+	 <div ng-if="d.TimeData[0].CAM.Status=='Unavailable to take service calls'">Unavailable to take service calls</div>
+	 </td>
+  </tr>
+  <tr>
+  <td>11.00AM</td>
+   <td ng-repeat="d in CalenderViewData"  style="color:#000000"  class="{{d.TimeData[0].DAM.LR}}" ><div ng-if="d.TimeData[0].DAM.Status=='Available'">{{d.TimeData[0].DAM.CallId}}<br>
+      {{d.TimeData[0].DAM.CustomerName}}<br>
+      {{d.TimeData[0].DAM.Subject}}<br>
+      <span  ng-hide="d.TimeData[0].DAM.Result==null"  ng-show="d.TimeData[0].DAM.Result==''" >Status: {{d.TimeData[0].DAM.ActivityType}}</span>
+	  <span  ng-hide="d.TimeData[0].DAM.Result==null"  ng-show="d.TimeData[0].DAM.Result!=''" >Status: {{d.TimeData[0].DAM.Result}}</span><br>
+      <span ng-hide="d.TimeData[0].DAM.Result==null" ng-show="d.TimeData[0].DAM.Result=='Completed'" >End Time: {{d.TimeData[0].DAM.EndTime}}</span>
+	  <span  ng-hide="d.TimeData[0].DAM.Result==null"  ng-show="d.TimeData[0].DAM.Result!='Completed'" >Start Time: {{d.TimeData[0].DAM.RespTime}}</span><br>
+     <span ng-hide="d.TimeData[0].DAM.Address==null">Address: {{d.TimeData[0].DAM.Address}}</span>
+	 
+	 </div>
+	 <div ng-if="d.TimeData[0].DAM.Status=='Unavailable to take service calls'">Unavailable to take service calls</div>
+	 </td>
+  </tr>
+  <tr>
+    <td>12:00PM</td>
+  <td ng-repeat="d in CalenderViewData"  style="color:#000000" class="{{d.TimeData[0].EPM.LR}}" ><div ng-if="d.TimeData[0].EPM.Status=='Available'">{{d.TimeData[0].EPM.CallId}}<br>
+      {{d.TimeData[0].EPM.CustomerName}}<br>
+      {{d.TimeData[0].EPM.Subject}}<br>
+      <span  ng-hide="d.TimeData[0].EPM.Result==null"  ng-show="d.TimeData[0].EPM.Result==''" >Status: {{d.TimeData[0].EPM.ActivityType}}</span>
+	  <span  ng-hide="d.TimeData[0].EPM.Result==null"  ng-show="d.TimeData[0].EPM.Result!=''" >Status: {{d.TimeData[0].EPM.Result}}</span><br>
+      <span ng-hide="d.TimeData[0].EPM.Result==null" ng-show="d.TimeData[0].EPM.Result=='Completed'" >End Time: {{d.TimeData[0].EPM.EndTime}}</span>
+	  <span  ng-hide="d.TimeData[0].EPM.Result==null"  ng-show="d.TimeData[0].EPM.Result!='Completed'" >Start Time: {{d.TimeData[0].EPM.RespTime}}</span><br>
+     <span ng-hide="d.TimeData[0].EPM.Address==null">Address: {{d.TimeData[0].EPM.Address}}</span>
+	 </div>
+	 <div ng-if="d.TimeData[0].EPM.Status=='Unavailable to take service calls'">Unavailable to take service calls</div>
+	 </td>
+  </tr>
+  <tr>
+    <td>1:00PM</td>
+    <td ng-repeat="d in CalenderViewData"  style="color:#000000" class="{{d.TimeData[0].FPM.LR}}"  ><div ng-if="d.TimeData[0].FPM.Status=='Available'">{{d.TimeData[0].FPM.CallId}}<br>
+      {{d.TimeData[0].FPM.CustomerName}}<br>
+      {{d.TimeData[0].FPM.Subject}}<br>
+      <span  ng-hide="d.TimeData[0].FPM.Result==null"  ng-show="d.TimeData[0].FPM.Result==''" >Status: {{d.TimeData[0].FPM.ActivityType}}</span>
+	  <span  ng-hide="d.TimeData[0].FPM.Result==null"  ng-show="d.TimeData[0].FPM.Result!=''" >Status: {{d.TimeData[0].FPM.Result}}</span><br>
+      <span ng-hide="d.TimeData[0].FPM.Result==null" ng-show="d.TimeData[0].FPM.Result=='Completed'" >End Time: {{d.TimeData[0].FPM.EndTime}}</span>
+	  <span  ng-hide="d.TimeData[0].FPM.Result==null"  ng-show="d.TimeData[0].FPM.Result!='Completed'" >Start Time: {{d.TimeData[0].FPM.RespTime}}</span><br>
+     <span ng-hide="d.TimeData[0].FPM.Address==null">Address: {{d.TimeData[0].FPM.Address}}</span>
+	 </div>
+	 <div ng-if="d.TimeData[0].FPM.Status=='Unavailable to take service calls'">Unavailable to take service calls</div>
+	 </td>
+  </tr>
+  <tr>
+    <td>2:00PM</td>
+   <td ng-repeat="d in CalenderViewData"  style="color:#000000"  class="{{d.TimeData[0].GPM.LR}}" ><div ng-if="d.TimeData[0].GPM.Status=='Available'">{{d.TimeData[0].GPM.CallId}}<br>
+      {{d.TimeData[0].GPM.CustomerName}}<br>
+      {{d.TimeData[0].GPM.Subject}}<br>
+      <span  ng-hide="d.TimeData[0].GPM.Result==null"  ng-show="d.TimeData[0].GPM.Result==''" >Status: {{d.TimeData[0].GPM.ActivityType}}</span>
+	  <span  ng-hide="d.TimeData[0].GPM.Result==null"  ng-show="d.TimeData[0].GPM.Result!=''" >Status: {{d.TimeData[0].GPM.Result}}</span><br>
+      <span ng-hide="d.TimeData[0].GPM.Result==null" ng-show="d.TimeData[0].GPM.Result=='Completed'" >End Time: {{d.TimeData[0].GPM.EndTime}}</span>
+	  <span  ng-hide="d.TimeData[0].GPM.Result==null"  ng-show="d.TimeData[0].GPM.Result!='Completed'" >Start Time: {{d.TimeData[0].GPM.RespTime}}</span><br>
+     <span ng-hide="d.TimeData[0].GPM.Address==null">Address: {{d.TimeData[0].GPM.Address}}</span>
+	 </div>
+	 <div ng-if="d.TimeData[0].GPM.Status=='Unavailable to take service calls'">Unavailable to take service calls</div>
+	 </td>
+  </tr>
+  <tr>
+   <td>3:00PM</td>
+   <td ng-repeat="d in CalenderViewData"  style="color:#000000" class="{{d.TimeData[0].HPM.LR}}" ><div ng-if="d.TimeData[0].HPM.Status=='Available'">{{d.TimeData[0].HPM.CallId}}<br>
+      {{d.TimeData[0].HPM.CustomerName}}<br>
+      {{d.TimeData[0].HPM.Subject}}<br>
+      <span  ng-hide="d.TimeData[0].HPM.Result==null"  ng-show="d.TimeData[0].HPM.Result==''" >Status: {{d.TimeData[0].HPM.ActivityType}}</span>
+	  <span  ng-hide="d.TimeData[0].HPM.Result==null"  ng-show="d.TimeData[0].HPM.Result!=''" >Status: {{d.TimeData[0].HPM.Result}}</span><br>
+      <span ng-hide="d.TimeData[0].HPM.Result==null" ng-show="d.TimeData[0].HPM.Result=='Completed'" >End Time: {{d.TimeData[0].HPM.EndTime}}</span>
+	  <span  ng-hide="d.TimeData[0].HPM.Result==null"  ng-show="d.TimeData[0].HPM.Result!='Completed'" >Start Time: {{d.TimeData[0].HPM.RespTime}}</span><br>
+     <span ng-hide="d.TimeData[0].HPM.Address==null">Address: {{d.TimeData[0].HPM.Address}}</span></div>
+	 <div ng-if="d.TimeData[0].HPM.Status=='Unavailable to take service calls'">Unavailable to take service calls</div>
+	 </td>
+  </tr>
+  <tr>
+    <td>4:00PM</td>
+    <td ng-repeat="d in CalenderViewData"  style="color:#000000" class="{{d.TimeData[0].IPM.LR}}" ><div ng-if="d.TimeData[0].IPM.Status=='Available'">{{d.TimeData[0].IPM.CallId}}<br>
+      {{d.TimeData[0].IPM.CustomerName}}<br>
+      {{d.TimeData[0].IPM.Subject}}<br>
+      <span  ng-hide="d.TimeData[0].IPM.Result==null"  ng-show="d.TimeData[0].IPM.Result==''" >Status: {{d.TimeData[0].IPM.ActivityType}}</span>
+	  <span  ng-hide="d.TimeData[0].IPM.Result==null"  ng-show="d.TimeData[0].IPM.Result!=''" >Status: {{d.TimeData[0].IPM.Result}}</span><br>
+      <span ng-hide="d.TimeData[0].IPM.Result==null" ng-show="d.TimeData[0].IPM.Result=='Completed'" >End Time: {{d.TimeData[0].IPM.EndTime}}</span>
+	  <span  ng-hide="d.TimeData[0].IPM.Result==null"  ng-show="d.TimeData[0].IPM.Result!='Completed'" >Start Time: {{d.TimeData[0].IPM.RespTime}}</span><br>
+     <span ng-hide="d.TimeData[0].IPM.Address==null">Address: {{d.TimeData[0].IPM.Address}}</span>
+	 </div>
+	 <div ng-if="d.TimeData[0].IPM.Status=='Unavailable to take service calls'">Unavailable to take service calls</div>
+	 </td>
+  </tr>
+  <tr>
+    <td>5:00PM</td>
+   <td ng-repeat="d in CalenderViewData"  style="color:#000000" class="{{d.TimeData[0].JPM.LR}}" ><div ng-if="d.TimeData[0].JPM.Status=='Available'">{{d.TimeData[0].JPM.CallId}}<br>
+      {{d.TimeData[0].JPM.CustomerName}}<br>
+      {{d.TimeData[0].JPM.Subject}}<br>
+      <span  ng-hide="d.TimeData[0].JPM.Result==null"  ng-show="d.TimeData[0].JPM.Result==''" >Status: {{d.TimeData[0].JPM.ActivityType}}</span>
+	  <span  ng-hide="d.TimeData[0].JPM.Result==null"  ng-show="d.TimeData[0].JPM.Result!=''" >Status: {{d.TimeData[0].JPM.Result}}</span><br>
+      <span ng-hide="d.TimeData[0].JPM.Result==null" ng-show="d.TimeData[0].JPM.Result=='Completed'" >End Time: {{d.TimeData[0].JPM.EndTime}}</span>
+	  <span  ng-hide="d.TimeData[0].JPM.Result==null"  ng-show="d.TimeData[0].JPM.Result!='Completed'" >Start Time: {{d.TimeData[0].JPM.RespTime}}</span><br>
+     <span ng-hide="d.TimeData[0].JPM.Address==null">Address: {{d.TimeData[0].JPM.Address}}</span>
+	 </div>
+	 <div ng-if="d.TimeData[0].JPM.Status=='Unavailable to take service calls'">Unavailable to take service calls</div>
+	 </td>
+  </tr>
+  <tr>
+    <td>6:00PM</td>
+   <td ng-repeat="d in CalenderViewData"  style="color:#000000" class="{{d.TimeData[0].KPM.LR}}" ><div ng-if="d.TimeData[0].KPM.Status=='Available'">{{d.TimeData[0].KPM.CallId}}<br>
+      {{d.TimeData[0].KPM.CustomerName}}<br>
+      {{d.TimeData[0].KPM.Subject}}<br>
+      <span  ng-hide="d.TimeData[0].KPM.Result==null"  ng-show="d.TimeData[0].KPM.Result==''" >Status: {{d.TimeData[0].KPM.ActivityType}}</span>
+	  <span  ng-hide="d.TimeData[0].KPM.Result==null"  ng-show="d.TimeData[0].KPM.Result!=''" >Status: {{d.TimeData[0].KPM.Result}}</span><br>
+      <span ng-hide="d.TimeData[0].KPM.Result==null" ng-show="d.TimeData[0].KPM.Result=='Completed'" >End Time: {{d.TimeData[0].KPM.EndTime}}</span>
+	  <span  ng-hide="d.TimeData[0].KPM.Result==null"  ng-show="d.TimeData[0].KPM.Result!='Completed'" >Start Time: {{d.TimeData[0].KPM.RespTime}}</span><br>
+     <span ng-hide="d.TimeData[0].KPM.Address==null">Address: {{d.TimeData[0].KPM.Address}}</span>
+	 </div>
+	 <div ng-if="d.TimeData[0].KPM.Status=='Unavailable to take service calls'">Unavailable to take service calls</div>
+	 </td>
+  </tr>
+  <tr>
+    <td>7:00PM</td>
+   <td ng-repeat="d in CalenderViewData"  style="color:#000000" class="{{d.TimeData[0].LPM.LR}}" ><div ng-if="d.TimeData[0].LPM.Status=='Available'">{{d.TimeData[0].LPM.CallId}}<br>
+      {{d.TimeData[0].LPM.CustomerName}}<br>
+      {{d.TimeData[0].LPM.Subject}}<br>
+      <span  ng-hide="d.TimeData[0].LPM.Result==null"  ng-show="d.TimeData[0].LPM.Result==''" >Status: {{d.TimeData[0].LPM.ActivityType}}</span>
+	  <span  ng-hide="d.TimeData[0].LPM.Result==null"  ng-show="d.TimeData[0].LPM.Result!=''" >Status: {{d.TimeData[0].LPM.Result}}</span><br>
+      <span ng-hide="d.TimeData[0].LPM.Result==null" ng-show="d.TimeData[0].LPM.Result=='Completed'" >End Time: {{d.TimeData[0].LPM.EndTime}}</span>
+	  <span  ng-hide="d.TimeData[0].LPM.Result==null"  ng-show="d.TimeData[0].LPM.Result!='Completed'" >Start Time: {{d.TimeData[0].LPM.RespTime}}</span><br>
+     <span ng-hide="d.TimeData[0].LPM.Address==null">Address: {{d.TimeData[0].LPM.Address}}</span>
+	 </div>
+	 <div ng-if="d.TimeData[0].LPM.Status=='Unavailable to take service calls'">Unavailable to take service calls</div>
+	 </td>
+  </tr>
+</table>
+</div>
+
+
+			 
+			 
+			    
+             </div>
+        </div>
+
+<!--End-Chart-box--> 
+    <hr/>
+    
+  </div>
+
+
+                    </div>
+
+                
+
+            </div>
+        </div>
+    </div>
+
+
+    <!-- JS Demo -->
+<script type="text/javascript" src="assets-minified/admin-all-demo.js"></script>
+
+ <script>
+    $( function() {
+    $( ".datepickerddd" ).datepicker({ dateFormat: 'yy-mm-dd'});
+  } );
+  
+   $(function() {
+    $('body').on('focus',".mydatepicker", function(){
+    $(this).datepicker();
+    });
+  }); 
+  
+
+
+  </script>
+
+
+</div>
+
+
+<!-- Assigned engg Modal -->
+<div id="AAModal" class="modal fade" role="dialog">
+  <div class="modal-dialog modal-lg">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Engineers</h4>
+      </div>
+      <div class="modal-body">
+        
+		<table width="100%" border="0" cellspacing="5" cellpadding="5" class="table-bordered table-responsive table-hover table">
+  <tr>
+    <th>Engineer Name</th>
+    <th>Current Status</th>
+    <th>Last Known Case Customer ID</th>
+    <th>EST ETA</th>
+    <th>End Time</th>
+    <th>Last Known Case Customer Address</th>
+    <th>Last Known Case Customer Name</th>
+  </tr>
+  <tr ng-repeat="e in AAEngineerList" ng-click="setAAengg(e.EngineerName,e.EngineerId,e.CurrentStatus);" style="cursor:pointer" >
+    <td>{{e.EngineerName}}</td>
+    <td><span ng-show="e.CurrentStatus=='Unavailable'" style="color:#FF0000">{{e.CurrentStatus}}</span>
+	<span ng-show="e.CurrentStatus!='Unavailable'">{{e.CurrentStatus}}</span></td>
+    <td>{{e.LastKnownCaseCustomerID}}</td>
+    <td>{{e.ESTETA}}</td>
+    <td>{{e.EndTime}}</td>
+    <td>{{e.LastKnownCaseCustomerAddress}}</td>
+    <td>{{e.CustomerName}}</td>
+  </tr>
+ 
+</table>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+<!-- Cal engg Modal -->
+<div id="CCModal" class="modal fade" role="dialog">
+  <div class="modal-dialog modal-lg">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Engineers</h4>
+      </div>
+      <div class="modal-body" style="height: 450px;
+    overflow-y: auto;">
+        
+		<table cellspacing="0" cellpadding="0" class="table-bordered table" >
+                  <tr  >
+                    <th>Engineer    Name</th>
+                    <th>Set Availability</th>
+                    <th>Display on calendar</th>
+                  </tr>
+                  <tr ng-repeat="d in EngineerList" >
+                    <td>{{d.EngineerName}}</td>
+                    <td><select ng-model="d.Availability" class="form-control">
+					<option value="Available to take service calls">Available to take service calls</option>
+					<option value="Unavailable to take service calls">Unavailable to take service calls</option>
+					</select></td>
+                    <td> <input ng-model="d.DisplayCalender" ng-checked="d.DisplayCalender=='Y'"  ng-true-value="'Y'" ng-false-value="'N'" style="width:25px;height:25px;" type="checkbox"/></td>
+                  </tr>
+                 
+                </table>
+				
+				<div align="center"><button type="button" class="btn-success btn" ng-click="SaveEnggList();"> Save </button></div>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+</body>
+</html>
